@@ -1,115 +1,347 @@
 /* Baseado na documentação: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
 
 
-.flex-container {
-	/* container block */
-	display: flex;
+/* Definições de Containers */
+/*
+[
+*/
+  /* flex-container */
+  /*
+  [
+  */
+    /* container block */
+    .flex{
+      display: flex;
+    }
 
-	/* container inline */
-	display: inline-flex;
-}
+    /* container inline */
+    .in-flex{
+      display: inline-flex;
+    }
+  /*
+  ]
+  */
 
-.flex-container-direction {
-	/* containers em linha da direita para a esquerda */
-	flex-direction: row;
+  /* flex-container-direction */
+  /*
+  [
+  */
+    /* Containers em coluna de cima para baixo */
+    .flex.col{
+      flex-direction: column;
+    }
 
-	/* containers em linha da esquerda para a direita */
-	flex-direction: row-reverse;
+    /* Containers em coluna de baixo para cima */
+    .flex.col-rev{
+      flex-direction: column-reverse;
+    }
 
-	/* containers em coluna de cima para baixo */
-	flex-direction: column;
+    /* Containers em linha da direita para a esquerda */
+    .flex.row{
+      flex-direction: row;
+    }
 
-	/* containers em coluna de baixo para cima */
-	flex-direction: column-reverse;
-}
+    /* Containers em linha da esquerda para a direita */
+    .flex.row-rev{
+      flex-direction: row-reverse;
+    }
+  /*
+  ]
+  */
 
-.flex-container-wrap {
-	/* flex items em uma linha */
-	flex-wrap: nowrap;
+  /* flex-container-wrap */
+  /*
+  [
+  */
+    /* Flex items em multiplas linhas de cima para baixo */
+    .flex.wrap{
+      flex-wrap: wrap;
+    }
 
-	/* flex items em multiplas linhas de cima para baixo */
-	flex-wrap: wrap;
-	
-	/* flex items em multiplas linhas de baixo para cima */
-	flex-wrap: wrap-reverse;
-}
+    /* Flex items em uma linha */
+    .flex.no-wrap{
+      flex-wrap: nowrap;
+    }
 
-.flex-container-flow {
-	/* combina flex-direction && flex-wrap */
-	flex-flow: <'flex-direction'> && <'flex-wrap'>;
-}
+    /* Flex items em multiplas linhas de baixo para cima */
+    .flex.wrap-reverse{
+      flex-wrap: wrap-reverse;
+    }
+  /*
+  ]
+  */
 
-.flex-container-justify {
-	/* containers no inicio da linha */
-	justify-content: flex-start;
+  /* flex-container-flow */
+  /*
+  [
+  */
+    /* Combina flex-direction && flex-wrap */
+    .flex-row-no-wrap {
+    flex-flow: row nowrap;
+    }
 
-	/* containers no final da linha */
-	justify-content: flex-end;
+    .flex-row-wrap {
+      flex-flow: row wrap;
+    }
 
-	/* containers no centro da linha */
-	justify-content: center;
+    .flex-row-wrap-rev {
+      flex-flow: row wrap-reverse;
+    }
 
-	/* containers no começo meio e fim da linha */
-	justify-content: space-between;
+    .flex-row-rev-no-wrap {
+      flex-flow: row-reverse nowrap;
+    }
 
-	/* containers no começo meio e fim da linha com margem */
-	justify-content: space-around;
+    .flex-row-rev-wrap {
+      flex-flow: row-reverse wrap;
+    }
 
-	/* containers divididos igualmente pela linha */
-	justify-content: space-evenly;
-}
+    .flex-row-rev-wrap-rev {
+      flex-flow: row-reverse wrap-reverse;
+    }
 
-.flex-container-align-items {
-	/* alinha o topo dos items */
-	align-items: flex-start;
+    .flex-col-no-wrap {
+      flex-flow: column nowrap;
+    }
 
-	/* alinha a base dos items */
-	align-items: flex-end;
+    .flex-col-wrap {
+      flex-flow: column wrap;
+    }
 
-	/* alinha os items com o seu centro */
-	align-items: center;
+    .flex-col-wrap-rev {
+      flex-flow: column wrap-reverse;
+    }
 
-	/* preenche o item com o tamanho maximo igual para todos */
-	align-items: stretch;
+    .flex-col-rev-no-wrap {
+      flex-flow: column-reverse nowrap;
+    }
 
-	/* alinha os items com base na linha de seu texto */
-	align-items: baseline;
-}
+    .flex-col-rev-wrap {
+      flex-flow: column-reverse wrap;
+    }
 
-.flex-container-align-content {
-	/* alinha os containers no topo */
-	align-content: flex-start;
+    .flex-col-rev-wrap-rev {
+      flex-flow: column-reverse wrap-reverse;
+    }
+  /*
+  ]
+  */
 
-	/* alinha os containers na base */
-	align-content: flex-end;
+  /* flex-container-justify */
+  /*
+  [
+  */
+    /* Containers no inicio da linha */
+    .flex.just-start{
+      justify-content: flex-start;
+    }
 
-	/* alinha os containers no centro */
-	align-content: center;
+    /* Containers no final da linha */
+    .flex.just-end{
+      justify-content: flex-end;
+    }
 
-	/* preenche o container com o tamanho maximo igual para todos para retirar o espaço remanecente */
-	align-content: stretch;
+    /* Containers no centro da linha */
+    .flex.just-center{
+      justify-content: center;
+    }
 
-	/* linhas igualmente distribuidas, primeira linha no topo e ultima linha na base */
-	align-content: space-between;
+    /* Containers no começo meio e fim da linha */
+    .flex.just-space-between{
+      justify-content: space-between;
+    }
 
-	/* linhas igualmente distribuidas com igual espaçamento */
-	align-content: space-around;
-}
+    /* Containers no começo meio e fim da linha com margem */
+    .flex.just-space-around{
+      justify-content: space-around;
+    }
 
-.flex-item-order {
-	/* sequencia dos items do menor ao maior, ex -1 0 1 2 3 */
-	order: <integer>;
-}
+    /* Containers divididos igualmente pela linha */
+    .flex.just-space-evenly{
+      justify-content: space-evenly;
+    }
+  /*
+  ]
+  */
 
-.flex-item-grow {
-	/* define o tamanho do item */
-	flex-grow: <number>;
-}
+  /* flex-container-align-items */
+  /*
+  [
+  */
+    /* Alinha o topo dos items */
+    .flex.align-start{
+      align-items: flex-start;
+    }
 
-.flex-item-shrink {
-	/* define a habilidade do item encolher de acordo com a necessidade */
-	flex-shrink: <number>;
-}
+    /* Alinha a base dos items */
+    .flex.align-end{
+      align-items: flex-end;
+    }
+
+    /* Alinha os items com o seu centro */
+    .flex.align-center{
+      align-items: center;
+    }
+
+    /* Alinha os items com base na linha de seu texto */
+    .flex.align-baseline{
+      align-items: baseline;
+    }
+
+    /* Preenche o item com o tamanho maximo igual para todos */
+    .flex.align-stretch{
+      align-items: stretch;
+    }
+  /*
+  ]
+  */
+
+  /* flex-container-align-content */
+  /*
+  [
+  */
+    /* Alinha os containers no topo */
+    .flex.alignc-start{
+      align-content: flex-start;
+    }
+
+    /* Alinha os containers na base */
+    .flex.alignc-end{
+      align-content: flex-end;
+    }
+
+    /* Alinha os containers no centro */
+    .flex.alignc-center{
+      align-content: center;
+    }
+
+    /* Linhas igualmente distribuidas, primeira linha no topo e ultima linha na base */
+    .flex.alignc-space-between{
+      align-content: space-between;
+    }
+
+    /* Linhas igualmente distribuidas com igual espaçamento */
+    .flex.alignc-space-around{
+      align-content: space-around;
+    }
+
+    /* Preenche o container com o tamanho maximo igual para todos para retirar o espaço remanecente */
+    .flex.alignc-stretch{
+      align-content: stretch;
+    }
+  /*
+  ]
+  */
+
+/*
+]
+*/
+
+/* Definições de Items */
+/*
+[
+*/
+  /* flex-item-order */
+  /*
+  [
+  */
+    /* Sequencia da disposição dos items */
+    .flex>.i-1{
+      order: 1;
+    }
+    .flex>.i-2{
+      order: 2;
+    }
+    .flex>.i-3{
+      order: 3;
+    }
+    .flex>.i-4{
+      order: 4;
+    }
+    .flex>.i-5{
+      order: 5;
+    }
+  /*
+  ]
+  */
+
+  /* flex-item-grow */
+  /*
+  [
+  */
+    /* Define o tamanho do item */
+    .flex>.grow-1{
+      flex-grow: 1;
+    }
+    .flex>.grow-2{
+      flex-grow: 2;
+    }
+    .flex>.grow-3{
+      flex-grow: 3;
+    }
+    .flex>.grow-4{
+      flex-grow: 4;
+    }
+    .flex>.grow-5{
+      flex-grow: 5;
+    }
+  /*
+  ]
+  */
+
+  /* flex-item-shrink */
+  /*
+  [
+  */
+    /* Define a habilidade do item encolher de acordo com a necessidade */
+    .flex>.shrink-1{
+      flex-shrink: 1;
+    }
+    .flex>.shrink-2{
+      flex-shrink: 2;
+    }
+    .flex>.shrink-3{
+      flex-shrink: 3;
+    }
+    .flex>.shrink-4{
+      flex-shrink: 4;
+    }
+    .flex>.shrink-5{
+      flex-shrink: 5;
+    }
+  /*
+  ]
+  */
+
+  /* flex-item-align */
+  /*
+  [
+  */
+    /* Alinha um item especifico, ex alinhar um item especifico dentro do flex-align-items */
+    .flex>.align-auto{
+      align-self: auto;
+    }
+    .flex>.align-start{
+      align-self: flex-start;
+    }
+    .flex>.align-end{
+      align-self: flex-end;
+    }
+    .flex>.align-center{
+      align-self: center;
+    }
+    .flex>.align-baseline{
+      align-self: baseline;
+    }
+    .flex>.align-stretch{
+      align-self: stretch;
+    }
+  /*
+  ]
+  */
+/*
+]
+*/
 
 .flex-item-length {
 	/* define o tamanho padrao (em px) de um item antes de algum espaço remanecente ser manipulado */
@@ -123,10 +355,13 @@
 	flex: none || [ <'flex-grow'> <'flex-shrink'> <'flex-basis'> ]
 }
 
-.flex-item-align {
-	/* alinha um item especifico, ex alinhar um item especifico dentro do flex-align-items */
-	align-self: auto || flex-start || flex-end || center || baseline || stretch;
-}
+/* Mais informações e explicações em: https://css-tricks.com/snippets/css/a-guide-to-flexbox/; */
 
 
-/* mais informações e explicações em: https://css-tricks.com/snippets/css/a-guide-to-flexbox/; */
+
+
+
+
+
+
+
