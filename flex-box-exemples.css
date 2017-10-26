@@ -1,0 +1,132 @@
+/* Baseado na documentação: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+
+
+.flex-container {
+	/* container block */
+	display: flex;
+
+	/* container inline */
+	display: inline-flex;
+}
+
+.flex-container-direction {
+	/* containers em linha da direita para a esquerda */
+	flex-direction: row;
+
+	/* containers em linha da esquerda para a direita */
+	flex-direction: row-reverse;
+
+	/* containers em coluna de cima para baixo */
+	flex-direction: column;
+
+	/* containers em coluna de baixo para cima */
+	flex-direction: column-reverse;
+}
+
+.flex-container-wrap {
+	/* flex items em uma linha */
+	flex-wrap: nowrap;
+
+	/* flex items em multiplas linhas de cima para baixo */
+	flex-wrap: wrap;
+	
+	/* flex items em multiplas linhas de baixo para cima */
+	flex-wrap: wrap-reverse;
+}
+
+.flex-container-flow {
+	/* combina flex-direction && flex-wrap */
+	flex-flow: <'flex-direction'> && <'flex-wrap'>;
+}
+
+.flex-container-justify {
+	/* containers no inicio da linha */
+	justify-content: flex-start;
+
+	/* containers no final da linha */
+	justify-content: flex-end;
+
+	/* containers no centro da linha */
+	justify-content: center;
+
+	/* containers no começo meio e fim da linha */
+	justify-content: space-between;
+
+	/* containers no começo meio e fim da linha com margem */
+	justify-content: space-around;
+
+	/* containers divididos igualmente pela linha */
+	justify-content: space-evenly;
+}
+
+.flex-container-align-items {
+	/* alinha o topo dos items */
+	align-items: flex-start;
+
+	/* alinha a base dos items */
+	align-items: flex-end;
+
+	/* alinha os items com o seu centro */
+	align-items: center;
+
+	/* preenche o item com o tamanho maximo igual para todos */
+	align-items: stretch;
+
+	/* alinha os items com base na linha de seu texto */
+	align-items: baseline;
+}
+
+.flex-container-align-content {
+	/* alinha os containers no topo */
+	align-content: flex-start;
+
+	/* alinha os containers na base */
+	align-content: flex-end;
+
+	/* alinha os containers no centro */
+	align-content: center;
+
+	/* preenche o container com o tamanho maximo igual para todos para retirar o espaço remanecente */
+	align-content: stretch;
+
+	/* linhas igualmente distribuidas, primeira linha no topo e ultima linha na base */
+	align-content: space-between;
+
+	/* linhas igualmente distribuidas com igual espaçamento */
+	align-content: space-around;
+}
+
+.flex-item-order {
+	/* sequencia dos items do menor ao maior, ex -1 0 1 2 3 */
+	order: <integer>;
+}
+
+.flex-item-grow {
+	/* define o tamanho do item */
+	flex-grow: <number>;
+}
+
+.flex-item-shrink {
+	/* define a habilidade do item encolher de acordo com a necessidade */
+	flex-shrink: <number>;
+}
+
+.flex-item-length {
+	/* define o tamanho padrao (em px) de um item antes de algum espaço remanecente ser manipulado */
+	/* <value>, auto */
+	flex-basis: <length> || auto;
+}
+
+.flex-item-full-flex {
+	/* shortcut para combinar flex-growth flex-shrink e flex-basis */
+	/* 0, 1, auto, none */
+	flex: none || [ <'flex-grow'> <'flex-shrink'> <'flex-basis'> ]
+}
+
+.flex-align-self {
+	/* alinha um item especifico, ex alinhar um item especifico dentro do flex-align-items */
+	align-self: auto || flex-start || flex-end || center || baseline || stretch;
+}
+
+
+/* mais informações e explicações em: https://css-tricks.com/snippets/css/a-guide-to-flexbox/; */
