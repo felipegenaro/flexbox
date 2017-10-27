@@ -76,51 +76,51 @@
   [
   */
     /* Combina flex-direction && flex-wrap */
-    .flex-row-no-wrap {
+    .flex.row-no-wrap {
     flex-flow: row nowrap;
     }
 
-    .flex-row-wrap {
+    .flex.row-wrap {
       flex-flow: row wrap;
     }
 
-    .flex-row-wrap-rev {
+    .flex.row-wrap-rev {
       flex-flow: row wrap-reverse;
     }
 
-    .flex-row-rev-no-wrap {
+    .flex.row-rev-no-wrap {
       flex-flow: row-reverse nowrap;
     }
 
-    .flex-row-rev-wrap {
+    .flex.row-rev-wrap {
       flex-flow: row-reverse wrap;
     }
 
-    .flex-row-rev-wrap-rev {
+    .flex.row-rev-wrap-rev {
       flex-flow: row-reverse wrap-reverse;
     }
 
-    .flex-col-no-wrap {
+    .flex.col-no-wrap {
       flex-flow: column nowrap;
     }
 
-    .flex-col-wrap {
+    .flex.col-wrap {
       flex-flow: column wrap;
     }
 
-    .flex-col-wrap-rev {
+    .flex.col-wrap-rev {
       flex-flow: column wrap-reverse;
     }
 
-    .flex-col-rev-no-wrap {
+    .flex.col-rev-no-wrap {
       flex-flow: column-reverse nowrap;
     }
 
-    .flex-col-rev-wrap {
+    .flex.col-rev-wrap {
       flex-flow: column-reverse wrap;
     }
 
-    .flex-col-rev-wrap-rev {
+    .flex.col-rev-wrap-rev {
       flex-flow: column-reverse wrap-reverse;
     }
   /*
