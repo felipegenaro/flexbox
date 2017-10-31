@@ -9,14 +9,18 @@
   /*
   [
   */
-    /* container block */
-    .flex{
+    /* Container block */
+    .flex {
       display: flex;
     }
 
-    /* container inline */
-    .in-flex{
+    /* Container inline */
+    .in-flex {
       display: inline-flex;
+    }
+    /* Container fixo, no flex */
+    .no-flex {
+      flex: none !important;
     }
   /*
   ]
@@ -27,22 +31,22 @@
   [
   */
     /* Containers em coluna de cima para baixo */
-    .flex.col{
+    .flex.col {
       flex-direction: column;
     }
 
     /* Containers em coluna de baixo para cima */
-    .flex.col-rev{
+    .flex.col-rev {
       flex-direction: column-reverse;
     }
 
     /* Containers em linha da direita para a esquerda */
-    .flex.row{
+    .flex.row {
       flex-direction: row;
     }
 
     /* Containers em linha da esquerda para a direita */
-    .flex.row-rev{
+    .flex.row-rev {
       flex-direction: row-reverse;
     }
   /*
@@ -54,17 +58,17 @@
   [
   */
     /* Flex items em multiplas linhas de cima para baixo */
-    .flex.wrap{
+    .flex.wrap {
       flex-wrap: wrap;
     }
 
     /* Flex items em uma linha */
-    .flex.no-wrap{
+    .flex.no-wrap {
       flex-wrap: nowrap;
     }
 
     /* Flex items em multiplas linhas de baixo para cima */
-    .flex.wrap-reverse{
+    .flex.wrap-reverse {
       flex-wrap: wrap-reverse;
     }
   /*
@@ -132,32 +136,32 @@
   [
   */
     /* Containers no inicio da linha */
-    .flex.just-start{
+    .flex.just-start {
       justify-content: flex-start;
     }
 
     /* Containers no final da linha */
-    .flex.just-end{
+    .flex.just-end {
       justify-content: flex-end;
     }
 
     /* Containers no centro da linha */
-    .flex.just-center{
+    .flex.just-center {
       justify-content: center;
     }
 
     /* Containers no começo meio e fim da linha */
-    .flex.just-space-between{
+    .flex.just-space-between {
       justify-content: space-between;
     }
 
     /* Containers no começo meio e fim da linha com margem */
-    .flex.just-space-around{
+    .flex.just-space-around {
       justify-content: space-around;
     }
 
     /* Containers divididos igualmente pela linha */
-    .flex.just-space-evenly{
+    .flex.just-space-evenly {
       justify-content: space-evenly;
     }
   /*
@@ -169,27 +173,27 @@
   [
   */
     /* Alinha o topo dos items */
-    .flex.align-start{
+    .flex.align-start {
       align-items: flex-start;
     }
 
     /* Alinha a base dos items */
-    .flex.align-end{
+    .flex.align-end {
       align-items: flex-end;
     }
 
     /* Alinha os items com o seu centro */
-    .flex.align-center{
+    .flex.align-center {
       align-items: center;
     }
 
     /* Alinha os items com base na linha de seu texto */
-    .flex.align-baseline{
+    .flex.align-baseline {
       align-items: baseline;
     }
 
     /* Preenche o item com o tamanho maximo igual para todos */
-    .flex.align-stretch{
+    .flex.align-stretch {
       align-items: stretch;
     }
   /*
@@ -201,32 +205,32 @@
   [
   */
     /* Alinha os containers no topo */
-    .flex.alignc-start{
+    .flex.alignc-start {
       align-content: flex-start;
     }
 
     /* Alinha os containers na base */
-    .flex.alignc-end{
+    .flex.alignc-end {
       align-content: flex-end;
     }
 
     /* Alinha os containers no centro */
-    .flex.alignc-center{
+    .flex.alignc-center {
       align-content: center;
     }
 
     /* Linhas igualmente distribuidas, primeira linha no topo e ultima linha na base */
-    .flex.alignc-space-between{
+    .flex.alignc-space-between {
       align-content: space-between;
     }
 
     /* Linhas igualmente distribuidas com igual espaçamento */
-    .flex.alignc-space-around{
+    .flex.alignc-space-around {
       align-content: space-around;
     }
 
     /* Preenche o container com o tamanho maximo igual para todos para retirar o espaço remanecente */
-    .flex.alignc-stretch{
+    .flex.alignc-stretch {
       align-content: stretch;
     }
   /*
@@ -246,19 +250,19 @@
   [
   */
     /* Sequencia da disposição dos items */
-    .flex>.i-1{
+    .flex>.i-1 {
       order: 1;
     }
-    .flex>.i-2{
+    .flex>.i-2 {
       order: 2;
     }
-    .flex>.i-3{
+    .flex>.i-3 {
       order: 3;
     }
-    .flex>.i-4{
+    .flex>.i-4 {
       order: 4;
     }
-    .flex>.i-5{
+    .flex>.i-5 {
       order: 5;
     }
   /*
@@ -270,19 +274,19 @@
   [
   */
     /* Define o tamanho do item */
-    .flex>.grow-1{
+    .flex>.grow-1 {
       flex-grow: 1;
     }
-    .flex>.grow-2{
+    .flex>.grow-2 {
       flex-grow: 2;
     }
-    .flex>.grow-3{
+    .flex>.grow-3 {
       flex-grow: 3;
     }
-    .flex>.grow-4{
+    .flex>.grow-4 {
       flex-grow: 4;
     }
-    .flex>.grow-5{
+    .flex>.grow-5 {
       flex-grow: 5;
     }
   /*
@@ -294,19 +298,19 @@
   [
   */
     /* Define a habilidade do item encolher de acordo com a necessidade */
-    .flex>.shrink-1{
+    .flex>.shrink-1 {
       flex-shrink: 1;
     }
-    .flex>.shrink-2{
+    .flex>.shrink-2 {
       flex-shrink: 2;
     }
-    .flex>.shrink-3{
+    .flex>.shrink-3 {
       flex-shrink: 3;
     }
-    .flex>.shrink-4{
+    .flex>.shrink-4 {
       flex-shrink: 4;
     }
-    .flex>.shrink-5{
+    .flex>.shrink-5 {
       flex-shrink: 5;
     }
   /*
@@ -318,22 +322,22 @@
   [
   */
     /* Alinha um item especifico, ex alinhar um item especifico dentro do flex-align-items */
-    .flex>.align-auto{
+    .flex>.align-auto {
       align-self: auto;
     }
-    .flex>.align-start{
+    .flex>.align-start {
       align-self: flex-start;
     }
-    .flex>.align-end{
+    .flex>.align-end {
       align-self: flex-end;
     }
-    .flex>.align-center{
+    .flex>.align-center {
       align-self: center;
     }
-    .flex>.align-baseline{
+    .flex>.align-baseline {
       align-self: baseline;
     }
-    .flex>.align-stretch{
+    .flex>.align-stretch {
       align-self: stretch;
     }
   /*
@@ -343,25 +347,19 @@
 ]
 */
 
-.flex-item-length {
-	/* define o tamanho padrao (em px) de um item antes de algum espaço remanecente ser manipulado */
-	/* <value>, auto */
-	flex-basis: <length> || auto;
-}
+/**/
+  /* Define o tamanho padrao (em px) de um item antes de algum espaço remanecente ser manipulado */
+  .flex-item-length {
+  	/* <value>, auto */
+  	flex-basis: <length> || auto;
+  }
 
-.flex-item-full-flex {
-	/* shortcut para combinar flex-growth flex-shrink e flex-basis */
-	/* 0, 1, auto, none */
-	flex: none || [ <'flex-grow'> <'flex-shrink'> <'flex-basis'> ]
-}
+  /* Shortcut para combinar flex-growth, flex-shrink e flex-basis */
+  .flex-item-full-flex {
+  	/* 0, 1, auto, none */
+  	flex: none || [ <'flex-grow'> <'flex-shrink'> <'flex-basis'> ]
+  }
+/**/
+
 
 /* Mais informações e explicações em: https://css-tricks.com/snippets/css/a-guide-to-flexbox/; */
-
-
-
-
-
-
-
-
-
